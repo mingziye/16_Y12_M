@@ -64,43 +64,6 @@ map.on('load', function() {
             }
     });
 });
-map.on('load', function() {
-    map.addLayer({
-        "id": "data1",
-        "type": "fill-extrusion",
-        "source": {
-        	'type': 'geojson',
-        	'data': data
-        },
-           'paint': {
-                'fill-extrusion-color' : {
-                    'property': 'f_tot',
-                    "stops":[
-                    	[0, 'lightcyan'],
-                    	[108, 'turquoise'],
-                        [452,'teal'],
-                        [1800,'steelblue'],
-                        [4000,'royalblue']
-                    ]
-                    
-                },
-                'fill-extrusion-height' : {
-                    'property': 'f_12',
-                    "stops":[
-                    	[0, 0],
-                    	[76, 7600],
-                        [151, 15100],
-                        [378, 37800],
-                        [1020, 102000],
-                        [1964,196400],
-                        
-                        
-                    ]
-                },
-                 'fill-extrusion-opacity': 0.9
-            }
-    });
-});
 </script>
 
 </body>
