@@ -2,18 +2,18 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Year 12 Males</title>
+    <title>2016 DNGTS</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
     <script src='./data.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
     <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top: 0px; height: 0px; left:0px; width:100%;}
-        
+        body { margin:2; padding:0; }
+        #map { position:absolute; top:0px; left:0px; bottom:0px; width:100%; }
     </style>
 </head>
 <body>
+
 <div id='map'></div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoibWFkZWxlaW5lam9oYW5zb24iLCJhIjoiY2lzczduYzJ4MDZrODJucGh0Mm1xbmVxNCJ9.i7q4iT8FFgh_y5v4we5UhQ';
@@ -25,7 +25,6 @@ var map = new mapboxgl.Map({
     bearing: -17.6,
     zoom: 9 // starting zoom
 });
- 
 map.on('load', function() {
     map.addLayer({
         "id": "data",
@@ -55,9 +54,7 @@ map.on('load', function() {
                         [121, 12100],
                         [240, 24000],
                         [787, 78700],
-                        [2100,210000],
-                        
-                        
+                        [2100,210000]
                     ]
                 },
                  'fill-extrusion-opacity': 0.9
