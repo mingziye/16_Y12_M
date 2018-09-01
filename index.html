@@ -6,12 +6,11 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
     <script src='./data.js'></script>
-    <script src='./data1.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top: 150px; height: 450px; left:70px; width:40%;}
-        #map1 { position:absolute; top: 150px; height: 450px; right:70px; width:40%;}
+        
     </style>
 </head>
 <body>
@@ -27,14 +26,7 @@ var map = new mapboxgl.Map({
     bearing: -17.6,
     zoom: 9 // starting zoom
 });
- var map = new mapboxgl.Map({
-    container: 'map1', // container id
-    style: 'mapbox://styles/mapbox/light-v9', // stylesheet location
-    center: [151.004105, -33.813002], // starting position [lng, lat]
-    pitch: 45,
-    bearing: -17.6,
-    zoom: 9 // starting zoom
-});
+ 
 map.on('load', function() {
     map.addLayer({
         "id": "data",
